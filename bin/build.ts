@@ -6,9 +6,9 @@ const importmap = {
 }
 
 await build({
-  entryPoints: ['main.tsx'],
+  entryPoints: ['src/main.tsx'],
   bundle: true,
-  outfile: 'out.js',
+  outfile: 'dist/out.js',
   plugins: [cache({importmap, directory: './.esbuild-plugin-cache'})],
 });
 Deno.exit();
